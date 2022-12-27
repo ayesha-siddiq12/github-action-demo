@@ -13,5 +13,5 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run a one-line script
-        run: sed -i 's/accessKeyId: "access_key_id"/accessKeyId: "${{ access_key_id }}"/g' index.js
+        run: sed -i 's/"access_key_id"/"${{ access_key_id }}"/g' index.js
   
