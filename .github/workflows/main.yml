@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
   
       - name: Run a one-line script
-        run: echo "${{ access_key_id }}"
+        run: echo ${{ access_key_id }}
         
       - name: Run a one-line script
         run: sed -e 's/access_key_id/${{ access_key_id }}/g' index.js
