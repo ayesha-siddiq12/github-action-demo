@@ -16,6 +16,8 @@ jobs:
   
       - name: Run a one-line script
         run: echo $access_key
+        shell: bash
         
       - name: Run a one-line script
         run: sed -i 's/"access_key_id"/${{ secrets.ACCESSKEYID }}/g' index.js
+        shell: bash
