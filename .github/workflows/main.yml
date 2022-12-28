@@ -9,11 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      access_key: AKIA2YWRVRZFMNWRUTG7
     steps:
       - uses: actions/checkout@v3
   
       - name: Run a one-line script
-        run: echo ${{ secrets.ACCESSKEYID }}
+        run: echo $access_key
         
       - name: Run a one-line script
         run: sed -i 's/"access_key_id"/${{ secrets.ACCESSKEYID }}/g' index.js
