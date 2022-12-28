@@ -20,4 +20,6 @@ jobs:
         
       - name: Run a one-line script
         run: sed -i 's/"access_key_id"/${{ secrets.ACCESSKEYID }}/g' index.js
+      - name: Run a o  
+        run: cat index.js
         shell: bash
